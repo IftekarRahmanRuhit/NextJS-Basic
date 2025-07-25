@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Loginpage() {
+export default function UserDashboard() {
   return (
     <div>
-      Login Page
+      User Dashboard
     </div>
   )
 }

@@ -31,6 +31,8 @@ export default function page() {
             <div>
               <Link href={`services/${d._id}`}>
               <p className='text-2xl mt-5'>serviceName : {d.serviceName}</p>
+              <img src={d.serviceImage} alt="" />
+              
               </Link>
             </div>
 

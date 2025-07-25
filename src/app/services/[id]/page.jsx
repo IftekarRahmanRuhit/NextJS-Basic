@@ -15,13 +15,13 @@ export default function ServiceDetailsPage({params}) {
       serviceDescription: "Expert IT support and troubleshooting for home and office devices."
     },
     {
-      _d: "3",
+      _id: "3",
       serviceName: "FitFlex Personal Training",
       serviceImage: "https://via.placeholder.com/150?text=Personal+Training",
       serviceDescription: "One-on-one fitness coaching tailored to your goals, available at home or online."
     }
   ]
-    const id = params.id;
+    const id = params?.id;
     const singleData = data.find(d => d._id == id)
   return (
     <div>

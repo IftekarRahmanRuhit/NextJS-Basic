@@ -19,7 +19,6 @@ export default function page() {
   return (
     // using router hooks for navigation 
     
-
     <div>
       <p  className='text-2xl font-bold'>Contact Page</p>
 
