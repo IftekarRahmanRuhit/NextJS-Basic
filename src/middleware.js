@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 // This function can be marked `async` if using `await` inside
 export function middleware(request) {
     const dummyData = {
-        role: 'user', 
+        role: 'admin'  
     }
     const isServicesPage = request.nextUrl.pathname.startsWith('/services')
     const isAdmin = dummyData.role == 'admin'
