@@ -23,12 +23,19 @@ export default function ServiceDetailsPage({params}) {
   ]
     const id = params?.id;
     const singleData = data.find(d => d._id == id)
-  return (
+    if(singleData)
+    { return (
     <div>
       <h1 className='text-4xl text-white'>Service Details Page</h1>
       <p className='mt-5'>serviceName:{singleData.serviceName}</p>
       <p>serviceDescription : {singleData.serviceDescription}</p>
       <p>Id:{id}</p>
     </div>
-  )
+  )}
+  else{
+  return  <>
+    <p> NOT FOUND </p>
+    </>
+  }
+ 
 }
