@@ -34,6 +34,15 @@ export default function Navbar() {
                 Contact
               </li>
             </Link>
+
+
+              <Link href="/posts">
+              <li className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-amber-200/70 hover:text-amber-900 hover:scale-105 hover:shadow-md cursor-pointer active:scale-95 ${
+                pathName === '/posts' ? 'bg-amber-200/80 text-amber-900 shadow-md' : ''
+              }`}>
+                Posts
+              </li>
+            </Link>
           </ul>
 
           {/* Mobile Navigation */}
