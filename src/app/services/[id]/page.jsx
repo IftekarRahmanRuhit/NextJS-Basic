@@ -1,48 +1,3 @@
-// import React from 'react'
-
-// export default function ServiceDetailsPage({params}) {
-//   const data = [
-//     {
-//       _id: "1",
-//       serviceName: "Elite Home Cleaning",
-//       serviceImage: "https://via.placeholder.com/150?text=Home+Cleaning",
-//       serviceDescription: "Professional and eco-friendly home cleaning services to keep your space spotless."
-//     },
-//     {
-//       _id: "2",
-//       serviceName: "TechFix IT Solutions",
-//       serviceImage: "https://via.placeholder.com/150?text=IT+Support",
-//       serviceDescription: "Expert IT support and troubleshooting for home and office devices."
-//     },
-//     {
-//       _id: "3",
-//       serviceName: "FitFlex Personal Training",
-//       serviceImage: "https://via.placeholder.com/150?text=Personal+Training",
-//       serviceDescription: "One-on-one fitness coaching tailored to your goals, available at home or online."
-//     }
-//   ]
-//     const id = params?.id;
-//     const singleData = data.find(d => d._id == id)
-//     if(singleData)
-//     { return (
-//     <div>
-//       <h1 className='text-4xl text-white'>Service Details Page</h1>
-//       <p className='mt-5'>serviceName:{singleData.serviceName}</p>
-//       <p>serviceDescription : {singleData.serviceDescription}</p>
-//       <p>Id:{id}</p>
-//     </div>
-//   )}
-//   else{
-//   return  <>
-//     <p> NOT FOUND </p>
-//     </>
-//   }
- 
-// }
-
-
-
-
 import React from 'react'
 
 export default function ServiceDetailsPage({params}) {
@@ -183,13 +138,13 @@ export default function ServiceDetailsPage({params}) {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <button 
-              onClick={() => window.history.back()}
+             
               className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full hover:from-amber-600 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Go Back
             </button>
             <button 
-              onClick={() => window.location.href = '/services'}
+           
               className="px-8 py-3 border-2 border-amber-500 text-amber-600 font-semibold rounded-full hover:bg-amber-50 transform hover:scale-105 transition-all duration-300"
             >
               View All Services
