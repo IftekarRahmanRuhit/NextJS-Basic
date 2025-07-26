@@ -1,6 +1,11 @@
 import React from "react";
 import MealsSearchInput from "./meals-components/MealsSearchInput";
 
+export const metadata = {
+  title: "Meals",
+  description: "Learning Next JS",
+};
+
 export default async function MealsPage({ searchParams }) {
   const query = await searchParams;
   // Fetching meals from the API

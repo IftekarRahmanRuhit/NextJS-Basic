@@ -6,7 +6,10 @@ export const getPosts = async () => {
     const data = await res.json();
     return data;
 }
-
+export const metadata = {
+  title: "My First Next App | Posts",
+  description: "Learning Next JS",
+};
 export default async function PostPage() {
     const posts = await getPosts();
     

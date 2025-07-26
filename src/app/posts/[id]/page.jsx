@@ -1,10 +1,26 @@
 import React from 'react'
+
+
+
+
 export const getSinglePost = async (post_id) => {
-    
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${post_id}`);
     const data = await res.json();
     return data;
 }
+
+// Metadata for the single post page dynamically will show
+export async function generateMetadata({ params }) {
+  const id = (await params).id
+ 
+  // fetch post information
+  const singlePost = await getSinglePost(id)
+  return {
+    title: singlePost.title,
+    description: singlePost.description,
+  }
+}
+
 
 export default async function SinglePost({params}) {
     const p = await params;
