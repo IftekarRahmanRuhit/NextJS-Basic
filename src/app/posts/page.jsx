@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React from 'react'
+import { getPosts } from '../../lib/getPosts';
 
-export const getPosts = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const data = await res.json();
-    return data;
-}
+// export const getPosts = async () => {
+//     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//     const data = await res.json();
+//     return data;
+// }
 export const metadata = {
   title: "Posts",
   description: "Learning Next JS",
