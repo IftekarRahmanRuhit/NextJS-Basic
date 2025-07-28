@@ -1,4 +1,7 @@
-
+export const metadata = {
+  title: "My First Next App | Home",
+  description: "Learning Next JS",
+};
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
