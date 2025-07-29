@@ -1,8 +1,13 @@
+import { getServerSession } from "next-auth";
+import {UserInfo} from "./components/UserInfo"
+import {authOptions} from "./api/auth/[...nextauth]/route"
+
 export const metadata = {
   title: "My First Next App | Home",
   description: "Learning Next JS",
 };
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession(authOptions)
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
       {/* Hero Section */}
@@ -13,8 +18,15 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent animate-pulse">
               Hello World
             </h1>
+            <div className="text-black">
+              {/* <UserInfo></UserInfo> */}
+              {JSON.stringify(session)}
+              </div>
             <div className="w-32 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"></div>
           </div>
+
+          
+
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">

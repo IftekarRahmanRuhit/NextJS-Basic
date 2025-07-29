@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
+import LoginButton from "./LoginButton";
+import UserInfo from "./UserInfo";
 
 export default function Navbar() {
   const pathName = usePathname();
@@ -70,6 +72,16 @@ export default function Navbar() {
                 Meals
               </li>
             </Link>
+            <li className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:bg-amber-200/70 hover:text-amber-900 hover:scale-105 hover:shadow-md cursor-pointer active:scale-95 ${
+                  pathName === "/posts"
+                    ? "bg-amber-200/80 text-amber-900 shadow-md"
+                    : ""
+                }`}>             
+              <LoginButton></LoginButton>
+                </li>
+                <li>
+                  {/* <UserInfo></UserInfo> */}
+                </li>
           </ul>
 
           {/* Mobile Navigation */}
@@ -162,6 +174,7 @@ export default function Navbar() {
                     Meals
                   </li>
                 </Link>
+
               </div>
             </ul>
           </div>
